@@ -28,55 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelCount = new Label();
-            button1 = new Button();
-            listBox1 = new ListBox();
-            textBox1 = new TextBox();
+            Sendbtn = new Button();
+            MsgRecord = new ListBox();
+            InputBox = new TextBox();
+            LabelCount = new Label();
             SuspendLayout();
             // 
-            // labelCount
+            // Sendbtn
             // 
-            labelCount.AutoSize = true;
-            labelCount.Location = new Point(26, 18);
-            labelCount.Name = "labelCount";
-            labelCount.Size = new Size(94, 15);
-            labelCount.TabIndex = 0;
-            labelCount.Text = "Echo Messenger";
-            labelCount.Click += label1_Click;
+            Sendbtn.Location = new Point(676, 390);
+            Sendbtn.Name = "Sendbtn";
+            Sendbtn.Size = new Size(75, 23);
+            Sendbtn.TabIndex = 0;
+            Sendbtn.Text = "전송";
+            Sendbtn.UseVisualStyleBackColor = true;
+            Sendbtn.Click += Sendbtn_Click;
             // 
-            // button1
+            // MsgRecord
             // 
-            button1.Location = new Point(674, 381);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 1;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            MsgRecord.FormattingEnabled = true;
+            MsgRecord.Location = new Point(31, 61);
+            MsgRecord.Name = "MsgRecord";
+            MsgRecord.Size = new Size(720, 304);
+            MsgRecord.TabIndex = 2;
             // 
-            // listBox1
+            // InputBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Location = new Point(26, 51);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(723, 304);
-            listBox1.TabIndex = 2;
+            InputBox.Location = new Point(31, 390);
+            InputBox.Name = "InputBox";
+            InputBox.Size = new Size(630, 23);
+            InputBox.TabIndex = 3;
             // 
-            // textBox1
+            // LabelCount
             // 
-            textBox1.Location = new Point(26, 381);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(637, 23);
-            textBox1.TabIndex = 3;
+            LabelCount.Font = new Font("궁서체", 28F);
+            LabelCount.ForeColor = Color.Black;
+            LabelCount.Location = new Point(31, 9);
+            LabelCount.Name = "LabelCount";
+            LabelCount.Size = new Size(403, 49);
+            LabelCount.TabIndex = 4;
+            LabelCount.Text = "Echo Messenger";
+            LabelCount.Click += LabelCount_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.DarkGoldenrod;
             ClientSize = new Size(788, 453);
-            Controls.Add(textBox1);
-            Controls.Add(listBox1);
-            Controls.Add(button1);
-            Controls.Add(labelCount);
+            Controls.Add(LabelCount);
+            Controls.Add(InputBox);
+            Controls.Add(MsgRecord);
+            Controls.Add(Sendbtn);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -85,9 +88,9 @@
 
         #endregion
 
-        private Label labelCount;
-        private Button button1;
-        private ListBox listBox1;
-        private TextBox textBox1;
+        private Button Sendbtn;
+        private ListBox MsgRecord;
+        private TextBox InputBox;
+        private Label LabelCount;
     }
 }
